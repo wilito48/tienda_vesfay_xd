@@ -7,7 +7,7 @@
   <link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="bg-black">
   <!-- Header/Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
@@ -32,9 +32,9 @@
   </nav>
 
   <!-- Hero Banner -->
-  <section class="container-fluid d-flex align-items-center justify-content-center" style="min-height: 70vh; background: url('assets/images/hero/img.jpg') center center/cover no-repeat;">
-    <div class="text-center" style="background: rgba(0,0,0,0.5); padding: 2rem; border-radius: 1rem;">
-      <h1 class="display-3 fw-bold text-white mb-3">Viste con actitud. Viste Vesfay.</h1>
+  <section class="container-fluid d-flex align-items-center justify-content-center" style="min-height: 60vh; background: url('assets/images/hero/img.jpg') center center/cover no-repeat;">
+    <div class="text-center bg-dark bg-opacity-50 p-4 rounded-4 w-100" style="max-width: 600px;">
+      <h1 class="display-5 display-md-3 fw-bold text-white mb-3">Viste con actitud. Viste Vesfay.</h1>
       <a href="tienda.html" class="btn btn-primary btn-lg">Explora la colección</a>
     </div>
   </section>
@@ -42,27 +42,27 @@
   <!-- Categorías principales -->
   <section class="container my-5">
     <div class="row text-center g-4">
-      <div class="col-md-4">
+      <div class="col-12 col-md-4">
         <div class="card h-100">
-          <img src="assets/images/categorias/mujer.jpg" class="card-img-top" alt="Mujer">
+          <img src="assets/images/categorias/mujer.jpg" class="card-img-top img-fluid" alt="Mujer" style="object-fit:cover; height:220px;">
           <div class="card-body">
             <h5 class="card-title">Mujer</h5>
             <a href="tienda.html?categoria=mujer" class="btn btn-outline-primary">Ver más</a>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-12 col-md-4">
         <div class="card h-100">
-          <img src="assets/images/categorias/hombre.jpg" class="card-img-top" alt="Hombre">
+          <img src="assets/images/categorias/hombre.jpg" class="card-img-top img-fluid" alt="Hombre" style="object-fit:cover; height:220px;">
           <div class="card-body">
             <h5 class="card-title">Hombre</h5>
             <a href="tienda.html?categoria=hombre" class="btn btn-outline-primary">Ver más</a>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-12 col-md-4">
         <div class="card h-100">
-          <img src="assets/images/categorias/niños.jpg" class="card-img-top" alt="Niños">
+          <img src="assets/images/categorias/niños.jpg" class="card-img-top img-fluid" alt="Niños" style="object-fit:cover; height:220px;">
           <div class="card-body">
             <h5 class="card-title">Niños</h5>
             <a href="tienda.html?categoria=niños" class="btn btn-outline-primary">Ver más</a>
@@ -76,9 +76,9 @@
   <section class="container my-5">
     <h2 class="text-center text-white mb-4">Productos Destacados</h2>
     <div class="row g-4 justify-content-center">
-      <div class="col-6 col-md-4 col-lg-3">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
         <div class="card h-100 text-center">
-          <img src="assets/images/productos/hombre/deportivo/prod1.jpg" class="card-img-top" alt="Producto 1">
+          <img src="assets/images/productos/hombre/deportivo/prod1.jpg" class="card-img-top img-fluid" alt="Producto 1" style="object-fit:cover; height:260px;">
           <div class="card-body">
             <h5 class="card-title">Camiseta Deportiva</h5>
             <p class="card-text">$99.99</p>
@@ -86,9 +86,9 @@
           </div>
         </div>
       </div>
-      <div class="col-6 col-md-4 col-lg-3">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
         <div class="card h-100 text-center">
-          <img src="assets/images/productos/mujer/casual/prod2.jpg" class="card-img-top" alt="Producto 2">
+          <img src="assets/images/productos/mujer/casual/prod2.jpg" class="card-img-top img-fluid" alt="Producto 2" style="object-fit:cover; height:260px;">
           <div class="card-body">
             <h5 class="card-title">Blusa Casual</h5>
             <p class="card-text">$79.99</p>
@@ -96,9 +96,9 @@
           </div>
         </div>
       </div>
-      <div class="col-6 col-md-4 col-lg-3">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
         <div class="card h-100 text-center">
-          <img src="assets/images/productos/niños/elegante/prod1.jpg" class="card-img-top" alt="Niños">
+          <img src="assets/images/productos/niños/elegante/prod1.jpg" class="card-img-top img-fluid" alt="Niños" style="object-fit:cover; height:260px;">
           <div class="card-body">
             <h5 class="card-title">Traje Elegante Niño</h5>
             <p class="card-text">$129.99</p>
@@ -120,27 +120,27 @@
   <section class="container my-5">
     <h2 class="text-center text-white mb-4">Lo que dicen nuestros clientes</h2>
     <div class="row g-4 justify-content-center">
-      <div class="col-md-4">
-        <div class="card h-100 text-center">
-          <img src="assets/images/testimonios/testimonio1.avif" alt="Testimonio Ana G." class="rounded-circle mx-auto mt-4 mb-2" style="width: 90px; height: 90px; object-fit: cover; border: 3px solid #fff; box-shadow: 0 2px 8px #0002;">
+      <div class="col-12 col-md-4">
+        <div class="card h-100 text-center bg-dark text-white border-light">
+          <img src="assets/images/testimonios/testimonio1.avif" alt="Testimonio Ana G." class="rounded-circle mx-auto mt-4 mb-2 img-fluid" style="width: 90px; height: 90px; object-fit: cover; border: 3px solid #fff; box-shadow: 0 2px 8px #0002;">
           <div class="card-body">
             <p class="card-text">"¡La mejor tienda de ropa online! Calidad y atención de primera."</p>
             <h6 class="card-subtitle fw-bold text-white">- Ana G.</h6>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card h-100 text-center">
-          <img src="assets/images/testimonios/testimonio2.avif" alt="Testimonio Luis P." class="rounded-circle mx-auto mt-4 mb-2" style="width: 90px; height: 90px; object-fit: cover; border: 3px solid #fff; box-shadow: 0 2px 8px #0002;">
+      <div class="col-12 col-md-4">
+        <div class="card h-100 text-center bg-dark text-white border-light">
+          <img src="assets/images/testimonios/testimonio2.avif" alt="Testimonio Luis P." class="rounded-circle mx-auto mt-4 mb-2 img-fluid" style="width: 90px; height: 90px; object-fit: cover; border: 3px solid #fff; box-shadow: 0 2px 8px #0002;">
           <div class="card-body">
             <p class="card-text">"Me encantan las colecciones de Vesfay, siempre encuentro algo nuevo."</p>
             <h6 class="card-subtitle fw-bold text-white">- Luis P.</h6>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card h-100 text-center">
-          <img src="assets/images/testimonios/testimonio3.jpg" alt="Testimonio Sofía M." class="rounded-circle mx-auto mt-4 mb-2" style="width: 90px; height: 90px; object-fit: cover; border: 3px solid #fff; box-shadow: 0 2px 8px #0002;">
+      <div class="col-12 col-md-4">
+        <div class="card h-100 text-center bg-dark text-white border-light">
+          <img src="assets/images/testimonios/testimonio3.jpg" alt="Testimonio Sofía M." class="rounded-circle mx-auto mt-4 mb-2 img-fluid" style="width: 90px; height: 90px; object-fit: cover; border: 3px solid #fff; box-shadow: 0 2px 8px #0002;">
           <div class="card-body">
             <p class="card-text">"El envío fue rápido y la calidad excelente. ¡Repetiré!"</p>
             <h6 class="card-subtitle fw-bold text-white">- Carlos M.</h6>
@@ -208,6 +208,18 @@
     @media (max-width: 600px) {
       #whatsapp-float img, .whatsapp-float img { width: 48px; height: 48px; }
       #whatsapp-float, .whatsapp-float { bottom: 16px; right: 16px; }
+    }
+    /* Responsividad extra para cards y textos */
+    @media (max-width: 768px) {
+      .card-img-top { height: 160px !important; }
+      .display-5, .display-3 { font-size: 2rem !important; }
+    }
+    @media (max-width: 576px) {
+      .card-img-top { height: 120px !important; }
+      .container, .container-fluid { padding-left: 8px !important; padding-right: 8px !important; }
+      .navbar-brand img { height: 28px !important; }
+      .display-5, .display-3 { font-size: 1.3rem !important; }
+      .btn-lg { font-size: 1rem !important; padding: 0.6rem 1.2rem !important; }
     }
   </style>
 
