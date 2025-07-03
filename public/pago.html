@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagar producto - Vesfay</title>
+  <link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #e3e9f0 0%, #f8fafc 100%);
+    }
+    .qr-img { max-width: 200px; width: 100%; height: auto; margin: 0 auto; display: block; }
+    .metodo-btn.active { border: 2px solid #0d6efd; background: #e7f1ff; color: #0d6efd; }
+    .producto-img-lg { max-width: 320px; max-height: 320px; object-fit: contain; border-radius: 12px; box-shadow: 0 2px 16px #0002; background: #fff; margin: 0 auto; display: block; }
+    .fade-in { animation: fadeIn 0.7s; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .card-producto-resumen { background: #fff; border-radius: 12px; box-shadow: 0 2px 16px #0002; color: #222; }
+    .card-producto-resumen strong { color: #0d6efd; }
+    .separador { border-top: 2px solid #e3e9f0; margin: 2rem 0 1.5rem 0; }
+    .card.shadow-lg {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px #0001, 0 1.5px 6px #0d6efd22;
+    }
+    .btn-outline-primary, .btn-outline-success {
+      background: #f8fafc;
+      font-weight: 500;
+    }
+    .btn-outline-primary:hover, .btn-outline-primary.active {
+      background: #0d6efd;
+      color: #fff;
+      border-color: #0d6efd;
+    }
+    .btn-outline-success:hover, .btn-outline-success.active {
+      background: #25d366;
+      color: #fff;
+      border-color: #25d366;
+    }
+    .form-label, .form-control, .alert-success, .btn, .card-producto-resumen, .separador, .text-center, .mb-3, .mb-2, .mb-4, .mt-4 {
+      color: #222 !important;
+    }
+    .alert-success {
+      background: #e6f9ea;
+      border-color: #b6e2c6;
+      color: #1a7f37 !important;
+    }
+    .btn-secondary {
+      background: #e3e9f0;
+      color: #222;
+      border: none;
+    }
+    .btn-secondary:hover {
+      background: #cfd8e3;
+      color: #0d6efd;
+    }
+    @media (max-width: 767px) {
+      .producto-img-lg { max-width: 90vw; }
+      .card-producto-resumen { padding: 1.2rem !important; }
+      .card.shadow-lg { padding: 1.2rem !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10">
+        <div class="card shadow-lg p-4">
+          <div class="row g-4 align-items-center">
+            <div class="col-12 col-md-5 text-center">
+              <img id="pagoImg" src="" alt="Producto" class="producto-img-lg mb-3 mb-md-0">
+            </div>
+            <div class="col-12 col-md-7">
+              <div class="card-producto-resumen p-4 mb-3">
+                <h3 class="mb-3" id="pagoNombre"></h3>
+                <div class="mb-2"><strong>Precio:</strong> <span id="pagoPrecio"></span></div>
+                <div class="mb-2"><strong>Talla:</strong> <span id="pagoTalla"></span></div>
+              </div>
+              <div class="separador"></div>
+              <h5 class="mb-3" style="color:#0d6efd;">Selecciona método de pago:</h5>
+              <div class="d-flex gap-3 mb-4 justify-content-center flex-wrap">
+                <button class="btn btn-outline-primary metodo-btn" id="btnTarjeta" type="button"><i class="bi bi-credit-card"></i> Tarjeta de crédito</button>
+                <button class="btn btn-outline-success metodo-btn" id="btnYape" type="button"><img src="assets/images/logo/icono_yape.png" alt="Yape" style="height:1.5em;vertical-align:middle;margin-right:0.3em;"> Yape</button>
+              </div>
+              <div id="pagoInstrucciones" class="text-center fade-in">
+                <p>Selecciona un método de pago para ver las instrucciones.</p>
+              </div>
+              <div class="text-center mt-4">
+                <a href="index.html" class="btn btn-secondary">Volver al inicio</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
+  <script>
+    // Obtener parámetros de la URL
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById('pagoNombre').textContent = params.get('nombre') || '-';
+    document.getElementById('pagoPrecio').textContent = params.get('precio') || '-';
+    document.getElementById('pagoTalla').textContent = params.get('talla') || '-';
+    // Imagen del producto (opcional: si hay parámetro img)
+    let imgSrc = params.get('img');
+    if (!imgSrc) imgSrc = 'assets/images/logo/logo-vesfay.png'; // fallback
+    document.getElementById('pagoImg').src = imgSrc;
+    document.getElementById('pagoImg').alt = params.get('nombre') || 'Producto';
+
+    // Métodos de pago
+    const instrucciones = {
+      Tarjeta: `<form id='formTarjeta' class='text-start fade-in'>
+        <div class='mb-3'>
+          <label class='form-label'>Nombre en la tarjeta</label>
+          <input type='text' class='form-control' required maxlength='40' autocomplete='cc-name'>
+        </div>
+        <div class='mb-3'>
+          <label class='form-label'>Número de tarjeta</label>
+          <input type='text' class='form-control' required maxlength='19' pattern='[0-9 ]{16,19}' inputmode='numeric' autocomplete='cc-number' placeholder='0000 0000 0000 0000'>
+        </div>
+        <div class='row'>
+          <div class='col-6 mb-3'>
+            <label class='form-label'>Vencimiento</label>
+            <input type='text' class='form-control' required maxlength='5' pattern='(0[1-9]|1[0-2])\/\d{2}' placeholder='MM/AA' autocomplete='cc-exp'>
+          </div>
+          <div class='col-6 mb-3'>
+            <label class='form-label'>CVV</label>
+            <input type='password' class='form-control' required maxlength='4' pattern='\d{3,4}' autocomplete='cc-csc'>
+          </div>
+        </div>
+        <button type='submit' class='btn btn-primary w-100 mt-2'>Pagar</button>
+      </form>` ,
+      Yape: `<p>Escanea el siguiente QR con Yape o paga al número:<br><strong>987654321</strong></p><img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=YAPE-demo" alt="QR Yape" class="qr-img">`
+    };
+    document.getElementById('btnTarjeta').onclick = function() {
+      document.getElementById('btnTarjeta').classList.add('active');
+      document.getElementById('btnYape').classList.remove('active');
+      document.getElementById('pagoInstrucciones').innerHTML = instrucciones.Tarjeta;
+      // Validación y simulación de pago
+      setTimeout(() => {
+        const form = document.getElementById('formTarjeta');
+        if (form) {
+          form.onsubmit = function(e) {
+            e.preventDefault();
+            form.querySelector('button[type=submit]').disabled = true;
+            form.querySelector('button[type=submit]').textContent = 'Procesando...';
+            setTimeout(() => {
+              form.innerHTML = `<div class='alert alert-success text-center fade-in'>¡Pago realizado con éxito!<br>Gracias por tu compra.</div>`;
+            }, 1500);
+          }
+        }
+      }, 100);
+    };
+    document.getElementById('btnYape').onclick = function() {
+      document.getElementById('btnYape').classList.add('active');
+      document.getElementById('btnTarjeta').classList.remove('active');
+      document.getElementById('pagoInstrucciones').innerHTML = instrucciones.Yape;
+    };
+  </script>
+</body>
+</html> 

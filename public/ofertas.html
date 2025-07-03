@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ofertas - Vesfay</title>
+  <link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-color: #f8f9fa; min-height: 100vh; display: flex; flex-direction: column;">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/images/logo/logo-vesfay.png" alt="Vesfay Logo" style="height: 38px; margin-right: 10px;">
+        Vesfay
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link active" href="ofertas.html">Ofertas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../admin/admin.html">Iniciar sesión</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container" style="margin-top: 100px; min-height: 60vh;">
+    <h1 class="text-center mb-4">Ofertas Especiales</h1>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <p class="lead text-center fw-semibold" style="color: #fff; font-size: 1.3rem; text-shadow: 1px 1px 6px #000;">¡Aprovecha nuestras ofertas exclusivas en productos seleccionados para hombre, mujer y niños!<br>Descuentos por tiempo limitado.</p>
+      </div>
+    </div>
+    <div class="row g-4 justify-content-center mb-5 pb-4">
+      <!-- Tarjetas de ofertas -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+        <div class="card h-100 text-center flex-fill">
+          <img src="assets/images/productos/hombre/elegante/prod3.jpg" class="card-img-top img-fluid" alt="Hombre Elegante 3">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Elegante Hombre 3</h5>
+            <p class="mb-1"><span class="text-decoration-line-through text-secondary">$99.99</span> <span class="fw-bold text-danger">$69.99</span></p>
+            <span class="badge bg-danger mb-2">-30%</span>
+            <a href="#" class="btn btn-primary mt-auto comprar-btn"
+              data-nombre="Elegante Hombre 3"
+              data-precio="69.99"
+              data-precio-original="99.99"
+              data-img="assets/images/productos/hombre/elegante/prod3.jpg"
+              data-desc="Camisa elegante para hombre, ideal para ocasiones formales."
+              data-descuento="30%">Comprar</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+        <div class="card h-100 text-center flex-fill">
+          <img src="assets/images/productos/hombre/casual/prod7.jpg" class="card-img-top img-fluid" alt="Hombre Casual 7">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Casual Hombre 7</h5>
+            <p class="mb-1"><span class="text-decoration-line-through text-secondary">$79.99</span> <span class="fw-bold text-danger">$54.99</span></p>
+            <span class="badge bg-danger mb-2">-31%</span>
+            <a href="#" class="btn btn-primary mt-auto comprar-btn"
+              data-nombre="Casual Hombre 7"
+              data-precio="54.99"
+              data-precio-original="79.99"
+              data-img="assets/images/productos/hombre/casual/prod7.jpg"
+              data-desc="Camisa casual para hombre, ideal para días casuales."
+              data-descuento="31%">Comprar</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+        <div class="card h-100 text-center flex-fill">
+          <img src="assets/images/productos/hombre/deportivo/prod10.jpeg" class="card-img-top img-fluid" alt="Hombre Deportivo 10">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Deportivo Hombre 10</h5>
+            <p class="mb-1"><span class="text-decoration-line-through text-secondary">$89.99</span> <span class="fw-bold text-danger">$62.99</span></p>
+            <span class="badge bg-danger mb-2">-30%</span>
+            <a href="#" class="btn btn-primary mt-auto comprar-btn"
+              data-nombre="Deportivo Hombre 10"
+              data-precio="62.99"
+              data-precio-original="89.99"
+              data-img="assets/images/productos/hombre/deportivo/prod10.jpeg"
+              data-desc="Camiseta deportiva para hombre, ideal para actividades físicas."
+              data-descuento="30%">Comprar</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+        <div class="card h-100 text-center flex-fill">
+          <img src="assets/images/productos/mujer/elegante/prod5.jpg" class="card-img-top img-fluid" alt="Mujer Elegante 5">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Elegante Mujer 5</h5>
+            <p class="mb-1"><span class="text-decoration-line-through text-secondary">$109.99</span> <span class="fw-bold text-danger">$76.99</span></p>
+            <span class="badge bg-danger mb-2">-30%</span>
+            <a href="#" class="btn btn-primary mt-auto comprar-btn"
+              data-nombre="Elegante Mujer 5"
+              data-precio="76.99"
+              data-precio-original="109.99"
+              data-img="assets/images/productos/mujer/elegante/prod5.jpg"
+              data-desc="Vestido elegante para mujer, ideal para ocasiones formales."
+              data-descuento="30%">Comprar</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+        <div class="card h-100 text-center flex-fill">
+          <img src="assets/images/productos/mujer/casual/prod12.jpg" class="card-img-top img-fluid" alt="Mujer Casual 12">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Casual Mujer 12</h5>
+            <p class="mb-1"><span class="text-decoration-line-through text-secondary">$69.99</span> <span class="fw-bold text-danger">$48.99</span></p>
+            <span class="badge bg-danger mb-2">-30%</span>
+            <a href="#" class="btn btn-primary mt-auto comprar-btn"
+              data-nombre="Casual Mujer 12"
+              data-precio="48.99"
+              data-precio-original="69.99"
+              data-img="assets/images/productos/mujer/casual/prod12.jpg"
+              data-desc="Vestido casual para mujer, ideal para días casuales."
+              data-descuento="30%">Comprar</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+        <div class="card h-100 text-center flex-fill">
+          <img src="assets/images/productos/mujer/deportivo/prod8.jpg" class="card-img-top img-fluid" alt="Mujer Deportivo 8">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Deportivo Mujer 8</h5>
+            <p class="mb-1"><span class="text-decoration-line-through text-secondary">$79.99</span> <span class="fw-bold text-danger">$55.99</span></p>
+            <span class="badge bg-danger mb-2">-30%</span>
+            <a href="#" class="btn btn-primary mt-auto comprar-btn"
+              data-nombre="Deportivo Mujer 8"
+              data-precio="55.99"
+              data-precio-original="79.99"
+              data-img="assets/images/productos/mujer/deportivo/prod8.jpg"
+              data-desc="Camiseta deportiva para mujer, ideal para actividades físicas."
+              data-descuento="30%">Comprar</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+        <div class="card h-100 text-center flex-fill">
+          <img src="assets/images/productos/niños/elegante/prod2.jpg" class="card-img-top img-fluid" alt="Niños Elegante 2">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Elegante Niños 2</h5>
+            <p class="mb-1"><span class="text-decoration-line-through text-secondary">$59.99</span> <span class="fw-bold text-danger">$41.99</span></p>
+            <span class="badge bg-danger mb-2">-30%</span>
+            <a href="#" class="btn btn-primary mt-auto comprar-btn"
+              data-nombre="Elegante Niños 2"
+              data-precio="41.99"
+              data-precio-original="59.99"
+              data-img="assets/images/productos/niños/elegante/prod2.jpg"
+              data-desc="Ropa elegante para niños, ideal para ocasiones formales."
+              data-descuento="30%">Comprar</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+        <div class="card h-100 text-center flex-fill">
+          <img src="assets/images/productos/niños/casual/prod15.jpg" class="card-img-top img-fluid" alt="Niños Casual 15">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Casual Niños 15</h5>
+            <p class="mb-1"><span class="text-decoration-line-through text-secondary">$49.99</span> <span class="fw-bold text-danger">$34.99</span></p>
+            <span class="badge bg-danger mb-2">-30%</span>
+            <a href="#" class="btn btn-primary mt-auto comprar-btn"
+              data-nombre="Casual Niños 15"
+              data-precio="34.99"
+              data-precio-original="49.99"
+              data-img="assets/images/productos/niños/casual/prod15.jpg"
+              data-desc="Ropa casual para niños, ideal para días casuales."
+              data-descuento="30%">Comprar</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+        <div class="card h-100 text-center flex-fill">
+          <img src="assets/images/productos/niños/deportivo/prod9.jpg" class="card-img-top img-fluid" alt="Niños Deportivo 9">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Deportivo Niños 9</h5>
+            <p class="mb-1"><span class="text-decoration-line-through text-secondary">$54.99</span> <span class="fw-bold text-danger">$37.99</span></p>
+            <span class="badge bg-danger mb-2">-31%</span>
+            <a href="#" class="btn btn-primary mt-auto comprar-btn"
+              data-nombre="Deportivo Niños 9"
+              data-precio="37.99"
+              data-precio-original="54.99"
+              data-img="assets/images/productos/niños/deportivo/prod9.jpg"
+              data-desc="Ropa deportiva para niños, ideal para actividades físicas."
+              data-descuento="31%">Comprar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de oferta -->
+    <div class="modal fade" id="ofertaModal" tabindex="-1" aria-labelledby="ofertaModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ofertaModalLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body row g-3 align-items-center">
+            <div class="col-12 col-md-5 d-flex align-items-center justify-content-center">
+              <img id="ofertaModalImg" src="" alt="" class="img-fluid rounded shadow" style="max-height:340px; object-fit:contain;">
+            </div>
+            <div class="col-12 col-md-7">
+              <p id="ofertaModalDesc" class="mb-2"></p>
+              <p class="h4 mb-3"><span id="ofertaModalPrecio"></span></p>
+              <div class="mb-3">
+                <label class="form-label fw-semibold">Talla:</label>
+                <div id="ofertaModalTallas" class="d-flex flex-wrap gap-2"></div>
+              </div>
+              <button class="btn btn-primary w-100" id="ofertaModalComprar">Comprar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4" style="margin-top:auto;">
+    <div class="container text-center">
+      <div class="mb-2">
+        <a href="#" class="text-white mx-2"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-white mx-2"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-white mx-2"><i class="bi bi-twitter"></i></a>
+      </div>
+      <div>Av. Principal 123, Ciudad, País</div>
+      <div>&copy; 2025 Vesfay. Todos los derechos reservados.</div>
+      <div class="mt-2">
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/51936839204" target="_blank" id="whatsapp-float" class="whatsapp-float">
+    <img src="assets/images/logo/logo_whatsapp.png" alt="WhatsApp">
+  </a>
+
+  <style>
+    #whatsapp-float, .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #whatsapp-float img, .whatsapp-float img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      box-shadow: 0 4px 24px #25d36699, 0 2px 8px #0006;
+      background: #fff;
+      transition: transform 0.2s, box-shadow 0.2s;
+      animation: whatsapp-pulse 1.5s infinite;
+    }
+    #whatsapp-float:hover img, .whatsapp-float:hover img {
+      transform: scale(1.13);
+      box-shadow: 0 0 0 12px #25d36633, 0 4px 24px #25d366cc, 0 2px 8px #0006;
+    }
+    @keyframes whatsapp-pulse {
+      0% { box-shadow: 0 4px 24px #25d36699, 0 2px 8px #0006, 0 0 0 0 #25d36644; }
+      70% { box-shadow: 0 4px 24px #25d36699, 0 2px 8px #0006, 0 0 0 16px #25d36600; }
+      100% { box-shadow: 0 4px 24px #25d36699, 0 2px 8px #0006, 0 0 0 0 #25d36600; }
+    }
+    @media (max-width: 600px) {
+      #whatsapp-float img, .whatsapp-float img { width: 48px; height: 48px; }
+      #whatsapp-float, .whatsapp-float { bottom: 16px; right: 16px; }
+    }
+  </style>
+
+  <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.js"></script>
+  <script>
+    // Modal de oferta
+    let ofertaModal = new bootstrap.Modal(document.getElementById('ofertaModal'));
+    let modalData = {};
+    document.querySelectorAll('.comprar-btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        modalData = {
+          nombre: this.dataset.nombre,
+          precio: this.dataset.precio,
+          precioOriginal: this.dataset.precioOriginal,
+          img: this.dataset.img,
+          desc: this.dataset.desc,
+          descuento: this.dataset.descuento
+        };
+        document.getElementById('ofertaModalLabel').textContent = modalData.nombre;
+        document.getElementById('ofertaModalImg').src = modalData.img;
+        document.getElementById('ofertaModalImg').alt = modalData.nombre;
+        document.getElementById('ofertaModalDesc').textContent = modalData.desc;
+        document.getElementById('ofertaModalPrecio').innerHTML = `<span class='text-decoration-line-through text-secondary me-2'>$${modalData.precioOriginal}</span> <span class='fw-bold text-danger'>$${modalData.precio}</span> <span class='badge bg-danger ms-2'>-${modalData.descuento}</span>`;
+        // Tallas como botones
+        const tallas = ['S','M','L','XL'];
+        let tallasHtml = '';
+        tallas.forEach(t => {
+          tallasHtml += `<button type='button' class='btn btn-outline-dark talla-btn me-2 mb-2' data-talla='${t}'>${t}</button>`;
+        });
+        document.getElementById('ofertaModalTallas').innerHTML = tallasHtml;
+        // Selección de talla
+        let selectedTalla = 'M';
+        const tallaBtns = document.querySelectorAll('.talla-btn');
+        tallaBtns.forEach(btn => {
+          if(btn.dataset.talla === 'M') btn.classList.add('active');
+          btn.onclick = function() {
+            tallaBtns.forEach(b=>b.classList.remove('active'));
+            btn.classList.add('active');
+            selectedTalla = btn.dataset.talla;
+          }
+        });
+        // Comprar
+        document.getElementById('ofertaModalComprar').onclick = function() {
+          window.location.href = `pago.html?nombre=${encodeURIComponent(modalData.nombre)}&precio=${encodeURIComponent(modalData.precio)}&img=${encodeURIComponent(modalData.img)}&talla=${encodeURIComponent(selectedTalla)}`;
+        }
+        ofertaModal.show();
+      });
+    });
+  </script>
+</body>
+</html> 

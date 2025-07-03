@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda - Vesfay</title>
+  <link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-color: #f8f9fa; min-height: 100vh; display: flex; flex-direction: column;">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/images/logo/logo-vesfay.png" alt="Vesfay Logo" style="height: 38px; margin-right: 10px;">
+        Vesfay
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#">Tienda</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="ofertas.html">Ofertas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../admin/admin.html">Iniciar sesión</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="container my-5" style="margin-top:90px;">
+    <!-- Tabs principales -->
+    <ul class="nav nav-tabs justify-content-center mb-4" id="mainTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="hombre-tab" data-bs-toggle="tab" data-bs-target="#hombre" type="button" role="tab">Hombre</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="mujer-tab" data-bs-toggle="tab" data-bs-target="#mujer" type="button" role="tab">Mujer</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="ninos-tab" data-bs-toggle="tab" data-bs-target="#ninos" type="button" role="tab">Niños</button>
+      </li>
+    </ul>
+    <div class="tab-content" id="mainTabsContent">
+      <!-- HOMBRE -->
+      <div class="tab-pane fade show active" id="hombre" role="tabpanel">
+        <ul class="nav nav-pills justify-content-center mb-4" id="hombreSubTabs" role="tablist">
+          <li class="nav-item"><button class="nav-link active" id="hombre-deportivo-tab" data-bs-toggle="pill" data-bs-target="#hombre-deportivo" type="button" role="tab">Deportivo</button></li>
+          <li class="nav-item"><button class="nav-link" id="hombre-casual-tab" data-bs-toggle="pill" data-bs-target="#hombre-casual" type="button" role="tab">Casual</button></li>
+          <li class="nav-item"><button class="nav-link" id="hombre-elegante-tab" data-bs-toggle="pill" data-bs-target="#hombre-elegante" type="button" role="tab">Elegante</button></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="hombre-deportivo" role="tabpanel">
+            <div class="row g-4 justify-content-center" id="hombre-deportivo-list"></div>
+          </div>
+          <div class="tab-pane fade" id="hombre-casual" role="tabpanel">
+            <div class="row g-4 justify-content-center" id="hombre-casual-list"></div>
+          </div>
+          <div class="tab-pane fade" id="hombre-elegante" role="tabpanel">
+            <div class="row g-4 justify-content-center" id="hombre-elegante-list"></div>
+          </div>
+        </div>
+      </div>
+      <!-- MUJER -->
+      <div class="tab-pane fade" id="mujer" role="tabpanel">
+        <ul class="nav nav-pills justify-content-center mb-4" id="mujerSubTabs" role="tablist">
+          <li class="nav-item"><button class="nav-link active" id="mujer-deportivo-tab" data-bs-toggle="pill" data-bs-target="#mujer-deportivo" type="button" role="tab">Deportivo</button></li>
+          <li class="nav-item"><button class="nav-link" id="mujer-casual-tab" data-bs-toggle="pill" data-bs-target="#mujer-casual" type="button" role="tab">Casual</button></li>
+          <li class="nav-item"><button class="nav-link" id="mujer-elegante-tab" data-bs-toggle="pill" data-bs-target="#mujer-elegante" type="button" role="tab">Elegante</button></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="mujer-deportivo" role="tabpanel">
+            <div class="row g-4 justify-content-center" id="mujer-deportivo-list"></div>
+          </div>
+          <div class="tab-pane fade" id="mujer-casual" role="tabpanel">
+            <div class="row g-4 justify-content-center" id="mujer-casual-list"></div>
+          </div>
+          <div class="tab-pane fade" id="mujer-elegante" role="tabpanel">
+            <div class="row g-4 justify-content-center" id="mujer-elegante-list"></div>
+          </div>
+        </div>
+      </div>
+      <!-- NIÑOS -->
+      <div class="tab-pane fade" id="ninos" role="tabpanel">
+        <ul class="nav nav-pills justify-content-center mb-4" id="ninosSubTabs" role="tablist">
+          <li class="nav-item"><button class="nav-link active" id="ninos-deportivo-tab" data-bs-toggle="pill" data-bs-target="#ninos-deportivo" type="button" role="tab">Deportivo</button></li>
+          <li class="nav-item"><button class="nav-link" id="ninos-casual-tab" data-bs-toggle="pill" data-bs-target="#ninos-casual" type="button" role="tab">Casual</button></li>
+          <li class="nav-item"><button class="nav-link" id="ninos-elegante-tab" data-bs-toggle="pill" data-bs-target="#ninos-elegante" type="button" role="tab">Elegante</button></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="ninos-deportivo" role="tabpanel">
+            <div class="row g-4 justify-content-center" id="ninos-deportivo-list"></div>
+          </div>
+          <div class="tab-pane fade" id="ninos-casual" role="tabpanel">
+            <div class="row g-4 justify-content-center" id="ninos-casual-list"></div>
+          </div>
+          <div class="tab-pane fade" id="ninos-elegante" role="tabpanel">
+            <div class="row g-4 justify-content-center" id="ninos-elegante-list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white py-4 mt-5" style="margin-top:auto;">
+    <div class="container text-center">
+      <div class="mb-2">
+        <a href="#" class="text-white mx-2"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-white mx-2"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-white mx-2"><i class="bi bi-twitter"></i></a>
+      </div>
+      <div>Av. Principal 123, Ciudad, País</div>
+      <div>&copy; 2025 Vesfay. Todos los derechos reservados.</div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/51936839204" target="_blank" id="whatsapp-float" class="whatsapp-float">
+    <img src="assets/images/logo/logo_whatsapp.png" alt="WhatsApp">
+  </a>
+
+  <style>
+    #whatsapp-float, .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #whatsapp-float img, .whatsapp-float img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      box-shadow: 0 4px 24px #25d36699, 0 2px 8px #0006;
+      background: #fff;
+      transition: transform 0.2s, box-shadow 0.2s;
+      animation: whatsapp-pulse 1.5s infinite;
+    }
+    #whatsapp-float:hover img, .whatsapp-float:hover img {
+      transform: scale(1.13);
+      box-shadow: 0 0 0 12px #25d36633, 0 4px 24px #25d366cc, 0 2px 8px #0006;
+    }
+    @keyframes whatsapp-pulse {
+      0% { box-shadow: 0 4px 24px #25d36699, 0 2px 8px #0006, 0 0 0 0 #25d36644; }
+      70% { box-shadow: 0 4px 24px #25d36699, 0 2px 8px #0006, 0 0 0 16px #25d36600; }
+      100% { box-shadow: 0 4px 24px #25d36699, 0 2px 8px #0006, 0 0 0 0 #25d36600; }
+    }
+    @media (max-width: 600px) {
+      #whatsapp-float img, .whatsapp-float img { width: 48px; height: 48px; }
+      #whatsapp-float, .whatsapp-float { bottom: 16px; right: 16px; }
+    }
+  </style>
+
+  <!-- Modal de detalle de producto -->
+  <div class="modal fade" id="productoModal" tabindex="-1" aria-labelledby="productoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productoModalLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body row g-3">
+          <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+            <img id="productoModalImg" src="" alt="" class="img-fluid rounded shadow" style="max-height:350px; object-fit:contain;">
+          </div>
+          <div class="col-12 col-md-6">
+            <p id="productoModalDesc" class="mb-2"></p>
+            <p class="h5 mb-3"><span id="productoModalPrecio"></span></p>
+            <div class="mb-3">
+              <label class="form-label">Talla:</label>
+              <div id="productoModalTallas" class="d-flex flex-wrap gap-2"></div>
+            </div>
+            <button class="btn btn-primary w-100" id="productoModalComprar">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
+  <script>
+    // Catálogo dinámico y optimización de imágenes
+    const categorias = [
+      {
+        nombre: 'hombre',
+        subcategorias: [
+          { nombre: 'deportivo', formato: i => i <= 6 ? 'jpg' : 'jpeg' },
+          { nombre: 'casual', formato: () => 'jpg' },
+          { nombre: 'elegante', formato: () => 'jpg' }
+        ]
+      },
+      {
+        nombre: 'mujer',
+        subcategorias: [
+          { nombre: 'deportivo', formato: () => 'jpg' },
+          { nombre: 'casual', formato: () => 'jpg' },
+          { nombre: 'elegante', formato: () => 'jpg' }
+        ]
+      },
+      {
+        nombre: 'ninos',
+        subcategorias: [
+          { nombre: 'deportivo', formato: () => 'jpg' },
+          { nombre: 'casual', formato: () => 'jpg' },
+          { nombre: 'elegante', formato: () => 'jpg' }
+        ]
+      }
+    ];
+    function randomPrice() {
+      return `$${(Math.random() * (129.99 - 39.99) + 39.99).toFixed(2)}`;
+    }
+    function crearTarjetas(categoria, subcategoria, formatoFn, genero) {
+      let html = '';
+      const carpetaImagenes = categoria === 'ninos' ? 'niños' : categoria;
+      for (let i = 1; i <= 20; i++) {
+        const formato = formatoFn(i);
+        const imgPath = `assets/images/productos/${carpetaImagenes}/${subcategoria}/prod${i}.${formato}`;
+        html += `
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" style="margin-bottom: 20px;">
+            <div class="card h-100 text-center">
+              <img src="${imgPath}" class="card-img-top img-fluid" alt="${capitalize(subcategoria)} ${capitalize(genero)} ${i}" loading="lazy">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">${capitalize(subcategoria)} ${capitalize(genero)} ${i}</h5>
+                <p class="card-text">${randomPrice()}</p>
+                <a href="#" class="btn btn-outline-primary mt-auto">Ver producto</a>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+      return html;
+    }
+    function capitalize(str) {
+      return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+    function cargarProductos(tabId, categoria, subcategoria, formatoFn, genero) {
+      const contenedor = document.getElementById(`${categoria}-${subcategoria}-list`);
+      if (contenedor && contenedor.innerHTML.trim() === '') {
+        contenedor.innerHTML = crearTarjetas(categoria, subcategoria, formatoFn, genero);
+      }
+    }
+    // Cargar productos de la pestaña activa al inicio
+    document.addEventListener('DOMContentLoaded', function() {
+      categorias.forEach(cat => {
+        cat.subcategorias.forEach(sub => {
+          const tabId = `${cat.nombre}-${sub.nombre}`;
+          if (document.getElementById(`${tabId}`) && document.getElementById(`${tabId}`).classList.contains('show') && document.getElementById(`${tabId}`).classList.contains('active')) {
+            cargarProductos(tabId, cat.nombre, sub.nombre, sub.formato, cat.nombre);
+          }
+        });
+      });
+      // Cargar productos al cambiar de subpestaña
+      document.querySelectorAll('.tab-pane').forEach(tab => {
+        tab.addEventListener('shown.bs.tab', function(e) {
+          const [categoria, subcategoria] = e.target.id.split('-');
+          const cat = categorias.find(c => c.nombre === categoria);
+          if (cat) {
+            const sub = cat.subcategorias.find(s => s.nombre === subcategoria);
+            if (sub) {
+              cargarProductos(`${categoria}-${subcategoria}`, categoria, subcategoria, sub.formato, categoria);
+            }
+          }
+        });
+      });
+    });
+    // Script para activar la pestaña según el parámetro 'categoria' en la URL
+    (function() {
+      function getParamsFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        return {
+          categoria: params.get('categoria'),
+          subcategoria: params.get('subcategoria'),
+          producto: params.get('producto')
+        };
+      }
+      let {categoria, subcategoria, producto} = getParamsFromUrl();
+      if (categoria === 'niños') categoria = 'ninos';
+      if (categoria) {
+        let tabId = '';
+        if (categoria === 'hombre') tabId = 'hombre-tab';
+        else if (categoria === 'mujer') tabId = 'mujer-tab';
+        else if (categoria === 'ninos') tabId = 'ninos-tab';
+        if (tabId) {
+          const tab = document.getElementById(tabId);
+          if (tab) {
+            var tabTrigger = new bootstrap.Tab(tab);
+            tabTrigger.show();
+          }
+        }
+      }
+      // Si hay subcategoria y producto, activar subpestaña y abrir el modal del producto correcto
+      if (categoria && subcategoria && producto) {
+        window.addEventListener('DOMContentLoaded', function() {
+          setTimeout(function() {
+            // Activar subpestaña
+            const subTabId = `${categoria}-${subcategoria}-tab`;
+            const subTab = document.getElementById(subTabId);
+            if (subTab) {
+              var subTabTrigger = new bootstrap.Tab(subTab);
+              subTabTrigger.show();
+            }
+            // Esperar a que los productos se carguen
+            setTimeout(function() {
+              const cardListId = `${categoria}-${subcategoria}-list`;
+              const cards = document.querySelectorAll(`#${cardListId} .card`);
+              const idx = parseInt(producto, 10) - 1;
+              if (cards[idx]) {
+                const btn = cards[idx].querySelector('.btn-outline-primary');
+                if (btn) btn.click();
+              }
+            }, 400);
+          }, 400);
+        });
+      }
+    })();
+
+    // Descripciones por subcategoría
+    const descripciones = {
+      hombre: {
+        deportivo: 'Calzado deportivo para hombre, ideal para actividades físicas y uso diario. Comodidad y estilo en cada paso.',
+        casual: 'Zapatos casuales para hombre, perfectos para el día a día y ocasiones informales. Diseño moderno y versátil.',
+        elegante: 'Calzado elegante para hombre, pensado para eventos formales y ocasiones especiales. Distinción y clase.'
+      },
+      mujer: {
+        deportivo: 'Calzado deportivo para mujer, diseñado para brindar soporte y confort en cada movimiento.',
+        casual: 'Zapatos casuales para mujer, combinan moda y comodidad para cualquier ocasión.',
+        elegante: 'Calzado elegante para mujer, ideal para fiestas, eventos y momentos especiales.'
+      },
+      ninos: {
+        deportivo: 'Calzado deportivo para niños, resistente y cómodo para sus aventuras diarias.',
+        casual: 'Zapatos casuales para niños, perfectos para la escuela y el juego.',
+        elegante: 'Calzado elegante para niños, para ocasiones especiales y celebraciones familiares.'
+      }
+    };
+    const tallas = ['S', 'M', 'L', 'XL'];
+
+    // Delegación de eventos para los botones "Ver producto"
+    document.body.addEventListener('click', function(e) {
+      if (e.target && e.target.matches('.btn-outline-primary')) {
+        const card = e.target.closest('.card');
+        const img = card.querySelector('img');
+        const nombre = card.querySelector('.card-title').textContent;
+        const precio = card.querySelector('.card-text').textContent;
+        // Extraer info de la ruta de la imagen
+        const imgSrc = img.getAttribute('src');
+        // assets/images/productos/{categoria}/{subcategoria}/prod{i}.{formato}
+        const match = imgSrc.match(/productos\/(hombre|mujer|niños)\/(deportivo|casual|elegante)\/prod(\d+)\.(jpg|jpeg)/);
+        let categoria = '', subcategoria = '', num = '';
+        if (match) {
+          categoria = match[1] === 'niños' ? 'ninos' : match[1];
+          subcategoria = match[2];
+          num = match[3];
+        }
+        // Descripción
+        const desc = descripciones[categoria] && descripciones[categoria][subcategoria] ? descripciones[categoria][subcategoria] : '';
+        // Llenar el modal
+        document.getElementById('productoModalLabel').textContent = nombre;
+        document.getElementById('productoModalImg').src = imgSrc;
+        document.getElementById('productoModalImg').alt = nombre;
+        document.getElementById('productoModalDesc').textContent = desc;
+        document.getElementById('productoModalPrecio').textContent = precio;
+        // Tallas
+        const tallasCont = document.getElementById('productoModalTallas');
+        tallasCont.innerHTML = '';
+        tallas.forEach(t => {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'btn btn-outline-secondary btn-sm';
+          btn.textContent = t;
+          btn.style.minWidth = '40px';
+          btn.onclick = function() {
+            tallasCont.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+          };
+          tallasCont.appendChild(btn);
+        });
+        // Mostrar el modal
+        const modal = new bootstrap.Modal(document.getElementById('productoModal'));
+        modal.show();
+
+        // Botón Comprar: abrir pago.html con datos del producto
+        const btnComprar = document.getElementById('productoModalComprar');
+        btnComprar.onclick = function() {
+          // Obtener talla seleccionada
+          let talla = '';
+          const btnTalla = document.querySelector('#productoModalTallas .active');
+          if (btnTalla) talla = btnTalla.textContent;
+          // Obtener imagen del producto
+          const imgUrl = img.getAttribute('src');
+          // Construir URL con parámetros
+          const params = new URLSearchParams({
+            nombre,
+            precio,
+            talla,
+            img: imgUrl
+          });
+          window.open(`pago.html?${params.toString()}`, '_blank');
+        };
+      }
+    });
+  </script>
+</body>
+</html> 

@@ -1,0 +1,119 @@
+/* Hero personalizado */
+.hero {
+  min-height: 90vh;
+  position: relative;
+  color: #fff;
+  background-blend-mode: darken;
+}
+.hero .container {
+  z-index: 2;
+  position: relative;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+
+/* Tarjetas de productos */
+.card-producto {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card-producto:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+/* Footer */
+footer a {
+  text-decoration: none;
+  transition: color 0.2s;
+}
+footer a:hover {
+  color: #0d6efd;
+}
+
+/* Navbar fix para scroll */
+body {
+  padding-top: 70px;
+  background: #000 !important;
+  min-height: 100vh;
+}
+
+/* Responsive ajustes */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero {
+    min-height: 60vh;
+  }
+}
+
+.card {
+  background: #181818;
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.45);
+  border-radius: 1rem;
+  border: 1px solid rgba(255,255,255,0.07);
+  transition: transform 0.2s, box-shadow 0.2s;
+  backdrop-filter: blur(2px);
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 16px 40px 0 rgba(0,0,0,0.65);
+  border-color: #0d6efd;
+}
+h1, h2, .card-title {
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+.card-text, .text-white, .navbar, .footer, .nav-link, label, .form-label {
+  color: #e0e0e0 !important;
+}
+.navbar, .footer, footer {
+  background: #000 !important;
+}
+hr {
+  border-top: 2px solid #222;
+  opacity: 0.5;
+  margin-bottom: 2rem;
+}
+@media (max-width: 767px) {
+  .card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.navbar-brand {
+  font-size: 2rem !important;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #fff !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+.navbar-nav .nav-link {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #e0e0e0 !important;
+  margin-left: 1.2rem;
+  transition: color 0.2s, text-shadow 0.2s;
+}
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+  color: #0d6efd !important;
+  text-shadow: 0 2px 8px #0d6efd44;
+}
+.navbar {
+  border-bottom: 1px solid #222;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center;
+  background: #222;
+} 

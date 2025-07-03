@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vesfay - Tienda de Ropa</title>
+  <link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header/Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/images/logo/logo-vesfay.png" alt="Vesfay Logo" style="height: 38px; margin-right: 10px;">
+        Vesfay
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="ofertas.html">Ofertas</a></li>
+          <li class="nav-item"><a class="nav-link" href="../admin/admin.html">Iniciar sesión</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <section class="container-fluid d-flex align-items-center justify-content-center" style="min-height: 70vh; background: url('assets/images/hero/img.jpg') center center/cover no-repeat;">
+    <div class="text-center" style="background: rgba(0,0,0,0.5); padding: 2rem; border-radius: 1rem;">
+      <h1 class="display-3 fw-bold text-white mb-3">Viste con actitud. Viste Vesfay.</h1>
+      <a href="tienda.html" class="btn btn-primary btn-lg">Explora la colección</a>
+    </div>
+  </section>
+
+  <!-- Categorías principales -->
+  <section class="container my-5">
+    <div class="row text-center g-4">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="assets/images/categorias/mujer.jpg" class="card-img-top" alt="Mujer">
+          <div class="card-body">
+            <h5 class="card-title">Mujer</h5>
+            <a href="tienda.html?categoria=mujer" class="btn btn-outline-primary">Ver más</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="assets/images/categorias/hombre.jpg" class="card-img-top" alt="Hombre">
+          <div class="card-body">
+            <h5 class="card-title">Hombre</h5>
+            <a href="tienda.html?categoria=hombre" class="btn btn-outline-primary">Ver más</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="assets/images/categorias/niños.jpg" class="card-img-top" alt="Niños">
+          <div class="card-body">
+            <h5 class="card-title">Niños</h5>
+            <a href="tienda.html?categoria=niños" class="btn btn-outline-primary">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Productos destacados -->
+  <section class="container my-5">
+    <h2 class="text-center text-white mb-4">Productos Destacados</h2>
+    <div class="row g-4 justify-content-center">
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card h-100 text-center">
+          <img src="assets/images/productos/hombre/deportivo/prod1.jpg" class="card-img-top" alt="Producto 1">
+          <div class="card-body">
+            <h5 class="card-title">Camiseta Deportiva</h5>
+            <p class="card-text">$99.99</p>
+            <a href="tienda.html?categoria=hombre&subcategoria=deportivo&producto=1" class="btn btn-outline-primary">Ver producto</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card h-100 text-center">
+          <img src="assets/images/productos/mujer/casual/prod2.jpg" class="card-img-top" alt="Producto 2">
+          <div class="card-body">
+            <h5 class="card-title">Blusa Casual</h5>
+            <p class="card-text">$79.99</p>
+            <a href="tienda.html?categoria=mujer&subcategoria=casual&producto=2" class="btn btn-outline-primary">Ver producto</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card h-100 text-center">
+          <img src="assets/images/productos/niños/elegante/prod1.jpg" class="card-img-top" alt="Niños">
+          <div class="card-body">
+            <h5 class="card-title">Traje Elegante Niño</h5>
+            <p class="card-text">$129.99</p>
+            <a href="tienda.html?categoria=niños&subcategoria=elegante&producto=1" class="btn btn-outline-primary">Ver producto</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ofertas especiales -->
+  <section class="container my-5">
+    <div class="alert alert-primary text-center" role="alert">
+      <strong>¡Descuento del 10% en tu primera compra!</strong> | Envío gratis en pedidos superiores a $150
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  <section class="container my-5">
+    <h2 class="text-center text-white mb-4">Lo que dicen nuestros clientes</h2>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-4">
+        <div class="card h-100 text-center">
+          <img src="assets/images/testimonios/testimonio1.avif" alt="Testimonio Ana G." class="rounded-circle mx-auto mt-4 mb-2" style="width: 90px; height: 90px; object-fit: cover; border: 3px solid #fff; box-shadow: 0 2px 8px #0002;">
+          <div class="card-body">
+            <p class="card-text">"¡La mejor tienda de ropa online! Calidad y atención de primera."</p>
+            <h6 class="card-subtitle fw-bold text-white">- Ana G.</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 text-center">
+          <img src="assets/images/testimonios/testimonio2.avif" alt="Testimonio Luis P." class="rounded-circle mx-auto mt-4 mb-2" style="width: 90px; height: 90px; object-fit: cover; border: 3px solid #fff; box-shadow: 0 2px 8px #0002;">
+          <div class="card-body">
+            <p class="card-text">"Me encantan las colecciones de Vesfay, siempre encuentro algo nuevo."</p>
+            <h6 class="card-subtitle fw-bold text-white">- Luis P.</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 text-center">
+          <img src="assets/images/testimonios/testimonio3.jpg" alt="Testimonio Sofía M." class="rounded-circle mx-auto mt-4 mb-2" style="width: 90px; height: 90px; object-fit: cover; border: 3px solid #fff; box-shadow: 0 2px 8px #0002;">
+          <div class="card-body">
+            <p class="card-text">"El envío fue rápido y la calidad excelente. ¡Repetiré!"</p>
+            <h6 class="card-subtitle fw-bold text-white">- Carlos M.</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Redes sociales (opcional) -->
+  <section class="container text-center my-5">
+    <h5 class="text-white mb-3">Síguenos en las redes sociales</h5>
+    <a href="#" class="btn btn-outline-light btn-sm mx-2"><i class="bi bi-instagram"></i> @vesfay</a>
+    <a href="#" class="btn btn-outline-light btn-sm mx-2"><i class="bi bi-facebook"></i> Facebook</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container text-center">
+      <div class="mb-2">
+        <a href="#" class="text-white mx-2"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-white mx-2"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-white mx-2"><i class="bi bi-twitter"></i></a>
+      </div>
+      <div>
+        <a href="#" class="text-secondary small" style="text-decoration:underline;">Política de privacidad</a> |
+        <a href="contacto.html" class="text-secondary small" style="text-decoration:underline;">Contacto</a>
+      </div>
+      <div>&copy; 2025 Vesfay. Todos los derechos reservados.</div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/51936839204" target="_blank" id="whatsapp-float" class="whatsapp-float">
+    <img src="assets/images/logo/logo_whatsapp.png" alt="WhatsApp">
+  </a>
+
+  <style>
+    #whatsapp-float, .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #whatsapp-float img, .whatsapp-float img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      box-shadow: 0 4px 24px #25d36699, 0 2px 8px #0006;
+      background: #fff;
+      transition: transform 0.2s, box-shadow 0.2s;
+      animation: whatsapp-pulse 1.5s infinite;
+    }
+    #whatsapp-float:hover img, .whatsapp-float:hover img {
+      transform: scale(1.13);
+      box-shadow: 0 0 0 12px #25d36633, 0 4px 24px #25d366cc, 0 2px 8px #0006;
+    }
+    @keyframes whatsapp-pulse {
+      0% { box-shadow: 0 4px 24px #25d36699, 0 2px 8px #0006, 0 0 0 0 #25d36644; }
+      70% { box-shadow: 0 4px 24px #25d36699, 0 2px 8px #0006, 0 0 0 16px #25d36600; }
+      100% { box-shadow: 0 4px 24px #25d36699, 0 2px 8px #0006, 0 0 0 0 #25d36600; }
+    }
+    @media (max-width: 600px) {
+      #whatsapp-float img, .whatsapp-float img { width: 48px; height: 48px; }
+      #whatsapp-float, .whatsapp-float { bottom: 16px; right: 16px; }
+    }
+  </style>
+
+  <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.js"></script>
+  <script src="main.js"></script>
+</body>
+</html> 
