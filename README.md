@@ -48,3 +48,6 @@ admin/
 
 ## 👨‍💻 Autor y contacto
 - Desarrollado por wilito48
+  
+## 👨‍💻 Probar en la web
+https://tienda-vesfay-xd.vercel.app/
